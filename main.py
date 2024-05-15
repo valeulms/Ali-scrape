@@ -13,6 +13,7 @@ class TopItems:
     def __init__(self):
         self.driver = webdriver.Chrome(options=chrome_options)
         self.driver.get("https://www.alibaba.com/")
+        self.driver.maximize_window()
         time.sleep(15)
         self.window_before = self.driver.window_handles[0]
         try:
